@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Escolha seu player!</title>
+	</head>
+	<body align ="center" style="background: black" onkeydown="teclaPressionada(event)">
+		<h2 style="font-size: 70;color:white">Escolha seu personagem</h2>
+		<img onclick="historiaGuerreiro()" src ="https://pngimg.com/uploads/viking/viking_PNG43.png" height="300px">
+		<img onclick="historiaMago()" src ="https://i.pinimg.com/originals/b7/90/fd/b790fdb5bd324a21d71bb093f7660818.png" height="300px">
+		
+		
+		<div style="width:400px; margin-left:40%"><p id="historia" style="font-size: 30;color:white">Primeiro voce deve escolher seu player!</p></div>
+		
+		<form>
+			<button type="submit" style="border-radius=10;background-color: #757575; font-size:40; color: white;">Prosseguir!</button>
+		</form>
+		
+		<script type="text/javascript">
+		
+			var bgGuerreiro = "Existia num passado distante um guerreiro que viajava pelo leste em busca da Espada Celestial. Seu poder era sabido por toda o Velho Mundo e seu nome era Josney..";
+			
+			var bgMago = "Numa terra desolada, uma bruxa vagava procurando possíveis aprendizes para obter o Elixir da Vida e com ele ter a vida eterna. Muitos aprendizes morreram, mas no fim Lucineide obteve seu destino...";
+			
+			function historiaGuerreiro() {
+				document.getElementById("historia").innerHTML = bgGuerreiro;
+			}
+			
+			function historiaMago() {
+				document.getElementById("historia").innerHTML = bgMago;
+			}
+			function teclaPressionada(event) {
+			var x = event.key;
+			if (x== "ArrowRight"){document.getElementById("historia").innerHTML = bgMago;}
+			if (x== "ArrowLeft"){document.getElementById("historia").innerHTML = bgGuerreiro;}
+			
+		}
+			
+		</script>
+	</body>
+</html>
+
+
